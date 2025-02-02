@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Image</title>
+</head>
+<body>
+    <h2>Upload an Image to Generate a 3D Model</h2>
+    <form action="{% url 'upload_image' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="image" required>
+        <button type="submit">Convert to 3D</button>
+    </form>
+            <!-- Lien vers l'éditeur de model-viewer -->
+<br><br>
+<a href="https://modelviewer.dev/editor/" target="_blank">
+    <button>aller voir le modèle en 3D</button>
+</a>
+
+</body>
+</html>
